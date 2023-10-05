@@ -16,7 +16,7 @@ public class VirtualThreadsExamles {
 		runVirtualThreads(100_000);   //Around  181 ms 
 		runVirtualThreads(2_000_000); //Around 3146 ms getting into several millions becomes too much overhead. 
 		
-		runClassicThreads(10_000);    // 10019 ms
+		runClassicThreads(10_000);    // 10019 ms Classing OS threds to see the difference
 	}
 
 	private static void newTheadAPIExamples() {
@@ -30,6 +30,9 @@ public class VirtualThreadsExamles {
 		}
 		
 		Thread.startVirtualThread(new DummyWorkload("Easy start"));
+		
+		Runnable runnable = () -> System.out.println("Some work");
+		Thread.ofVirtual().start(runnable);  // in contrast platform threads are created via Thread.ofPlatform()
 		
 	}
 	
