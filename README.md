@@ -11,5 +11,5 @@ sdk install java 21-oracle
 ```
 ## Virual Threads
 
-* Code [Examples](./blob/main/src/org/holbreich/java21/VirtualThreadsExamles.java)
+* Code [Examples](blob/main/src/org/holbreich/java21/VirtualThreadsExamles.java)
 * Corresponing article about [Virtual Threads](https://alexander.holbreich.org/jdk21-virtual-threads/)
